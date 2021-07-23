@@ -1,0 +1,25 @@
+.jumbotron {
+    text-align: center;
+    background-color: rgb(228, 220, 220);
+}
+.time-block {
+    text-align: left;
+    border-radius: 15px;
+}
+.description {
+    white-space: pre-wrap;
+}
+
+.saveBtn{
+    background-color: rgb(136, 136, 243);
+    color:white;
+    border: 1px black solid;
+}
+
+.saveBtn:hover {
+    background-color: blue;
+}
+
+.description:hover {
+    background-color: rgb(212, 208, 208);
+}
