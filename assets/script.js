@@ -1,8 +1,7 @@
 var dateAndTimeEl = $('#currentDay');
 function Intilization() {
-    TimeCounter();
-    //workdaySchedulerpastPresentFuture();
-
+    TimeCounter(); // Displaying day, month, date, year and time with seconds
+    workdaySchedulerpastPresentFuture(); // calling a function for past present and future time slots.
 }
 
 $(".saveBtn").on("click", function () {
@@ -26,15 +25,11 @@ $("#hour17 .description").val(localStorage.getItem("hour17"));
 function TimeCounter() {
     setInterval(function () {
         var now = moment().format("dddd, MMMM Do YYYY, h:mm:ss a");
-        console.log(now);
         dateAndTimeEl.text(now);
-
     }, 1000);
 }
 
-
 function workdaySchedulerpastPresentFuture() {
-
     $(".time-block").each(function () {
         var presentTime = moment().hour();
         var schedulerTime = parseInt($(this).attr("id").split("hour")[1]);
@@ -55,10 +50,6 @@ function workdaySchedulerpastPresentFuture() {
         }
 
     })
-
-
 }
 
-
-
-Intilization();
+Intilization(); // initial function 
